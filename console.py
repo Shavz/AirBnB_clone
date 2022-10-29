@@ -95,7 +95,6 @@ class HBNBCommand(cmd.Cmd):
         """
         Count the amount of instances in a given class
         """
-        
         l_c = argv.split()
         all_instances = storage.all()
         if l_c[0] in self.__classes:
