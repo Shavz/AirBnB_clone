@@ -55,7 +55,7 @@ id does not apply to create command
 #### For Help:
 ```
 (hbnb)help create
-Create a new instace of a class
+Create a new instance of a class
 (hbnb)
 ```
 #### For standard commands:
