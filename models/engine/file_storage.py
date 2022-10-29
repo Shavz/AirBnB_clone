@@ -4,14 +4,18 @@ import models
 
 
 class FileStorage:
-    """serializes instances -> json file and deserializes
-    json file -> instances"""
+    """
+    serializes instances -> json file and deserializes
+    json file -> instances
+    """
 
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
-        """returns dictionary __objects"""
+        """
+        returns dictionary __objects
+        """
         return self.__objects
 
     def new(self, obj):
@@ -23,7 +27,9 @@ class FileStorage:
                                           obj.id)] = obj
 
     def save(self):
-        """serializes __objects to __file_path"""
+        """
+        serializes __objects to __file_path
+        """
         obj_dict = {}
         for object_id, ob in self.__objects.items():
             obj_dict[object_id] = ob.to_dict()
@@ -31,7 +37,9 @@ class FileStorage:
             json.dump(obj_dict, f)
 
     def reload(self):
-        """deserializes __objects from __file_path"""
+        """
+        deserializes __objects from __file_path
+        """
         try:
             with open(self.__file_path, encoding="UTF-8") as f:
                 obj = json.load(f)
