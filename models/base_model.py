@@ -30,7 +30,7 @@ class BaseModel:
 
     def __str__(self):
         """
-        method for named
+        method for name
         """
         nameClass = self.__class__.__name__
         return ("[{}] ({}) {}".format(nameClass, self.id, self.__dict__))
@@ -44,7 +44,7 @@ class BaseModel:
 
     def to_dict(self):
         """
-        method for create a dictionary
+        method for creating a dictionary
         """
         new_dict = dict(self.__dict__)
         new_dict["__class__"] = self.__class__.__name__
