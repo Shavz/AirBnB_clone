@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-class place for general stuff
+class place for location
 """
 from models.base_model import BaseModel
 
 
 class Place(BaseModel):
-    """inheritated class Place from BaseModel"""
+    """inherited class Place from BaseModel"""
     name = ""
     city_id = ""
     user_id = ""
