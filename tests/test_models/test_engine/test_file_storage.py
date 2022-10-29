@@ -65,7 +65,7 @@ class TestFileStorageClass(unittest.TestCase):
         self.assertEqual(True, issubclass(type(obj), type(BaseModel())))
 
     def test_new(self):
-        """tests new method adds new obj to dictionary"""
+        """tests new method adds new object to dictionary"""
         m = BaseModel()
         storage.new(m)
         obj = storage.all()
