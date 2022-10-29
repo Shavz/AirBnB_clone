@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-class user the best important
+class user
 """
 from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """inheritated class User from BaseModel"""
+    """inherited class User from BaseModel"""
     email = ""
     password = ""
     first_name = ""
