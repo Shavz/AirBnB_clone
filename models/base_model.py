@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-fun class base model do everuthing
+Class base model to carry out the requirements
 """
 import uuid
 from datetime import datetime
@@ -9,7 +9,7 @@ import models
 
 class BaseModel:
     """
-    our code insert here
+    Code
     """
     def __init__(self, *args, **kwargs):
         """
@@ -37,14 +37,14 @@ class BaseModel:
 
     def save(self):
         """
-        method for save stuff
+        method for saving
         """
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
         """
-        method for create a dict
+        method for create a dictionary
         """
         new_dict = dict(self.__dict__)
         new_dict["__class__"] = self.__class__.__name__
