@@ -63,7 +63,7 @@ class TestAmenityClass(unittest.TestCase):
         self.assertEqual(prev_created_at, a.created_at)
 
     def test_str_method(self):
-        """test __str__ represetation in stdout"""
+        """test __str__ representation in stdout"""
         a = Amenity()
         try:
             stdout, sys.stdout = sys.stdout, StringIO()
@@ -124,42 +124,42 @@ class TestAmenityClass(unittest.TestCase):
         self.assertEqual(type(a), type(a2))
 
     def test_dict_to_id_attr(self):
-        """test dict -> instance's id attr"""
+        """test dict -> instances id attr"""
         a = Amenity()
         a_dictionary = a.to_dict()
         a2 = Amenity(**a_dictionary)
         self.assertEqual(a.id, a2.id)
 
     def test_dict_to_id_attr_type(self):
-        """test dict -> instance's id attr"""
+        """test dict -> instances id attr"""
         a = Amenity()
         a_dictionary = a.to_dict()
         a2 = Amenity(**a_dictionary)
         self.assertEqual(str, type(a2.id))
 
     def test_dict_to_updated_at_attr(self):
-        """test dict -> instance's updated_at attr"""
+        """test dict -> instances updated_at attr"""
         a = Amenity()
         a_dictionary = a.to_dict()
         a2 = Amenity(**a_dictionary)
         self.assertEqual(a.updated_at, a2.updated_at)
 
     def test_dict_to_updated_at_attr_type(self):
-        """test dict -> instance's updated_at attr type"""
+        """test dict -> instances updated_at attr type"""
         a = Amenity()
         a_dictionary = a.to_dict()
         a2 = Amenity(**a_dictionary)
         self.assertEqual(type(datetime.now()), type(a2.updated_at))
 
     def test_dict_to_created_at_attr(self):
-        """test dict -> instance's created_at attr"""
+        """test dict -> instances created_at attr"""
         a = Amenity()
         a_dictionary = a.to_dict()
         a2 = Amenity(**a_dictionary)
         self.assertEqual(a.created_at, a2.created_at)
 
     def test_dict_to_created_at_attr_type(self):
-        """test dict -> instance's created_at attr type"""
+        """test dict -> instances created_at attr type"""
         a = Amenity()
         a_dictionary = a.to_dict()
         a2 = Amenity(**a_dictionary)
