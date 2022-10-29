@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""This module contains the entry point of the command interpreter"""
+
+"""
+Contains the entry point of the command interpreter
+"""
+
 import cmd
 from shlex import split
 from datetime import datetime
@@ -14,19 +18,15 @@ from models import storage, cls_dict
 
 
 class HBNBCommand(cmd.Cmd):
-    """Class HBNBCommand inherits from cmd.Cmd"""
+    """
+    Class HBNBCommand inherits from cmd.Cmd
+    """
     prompt = '(hbnb) '
     vc = cls_dict
 
     def do_create(self, arg):
-        """Create command to create a new instance of BaseModel
-
-        Usage:
-            $ create BaseModel
-
-        Prints:
-            '** class name missing **' if no class name is given
-            '** class doesn't exist **' if class name doesn't exist
+        """
+        Create command to create a new instance of BaseModel
         """
         if not arg:
             print('** class name missing **')
@@ -41,34 +41,18 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_show(self, arg):
-        """Show command to print string representation of instance
+        """
+        Show command to print string representation of instance
         based on the class name and id
-
-        Usage:
-            $ show BaseModel 1234-1234-1234
-
-        Prints:
-            '** class name missing **' if no class name is given
-            '** class doesn't exist **' if class name doesn't exist
-            '** instance id missing **' if instance id missing
-            '** no instance found **' if instance of class does not exist
         """
         obj = self.find_obj(arg)
         if obj:
             print(obj)
 
     def do_destroy(self, arg):
-        """Destroy command to delete an instance based on a class name and id
+        """
+        Destroy command to delete an instance based on a class name and id
         and save changes to a JSON file
-
-        Usage:
-            $ destroy BaseModel 1234-1234-1234
-
-        Prints:
-            '** class name missing **' if no class name is given
-            '** class doesn't exist **' if class name doesn't exist
-            '** instance id missing **' if instance id missing
-            '** no instance found **' if instance of class does not exist
         """
         obj = self.find_obj(arg)
         if obj:
@@ -77,12 +61,9 @@ class HBNBCommand(cmd.Cmd):
             storage.save()
 
     def do_all(self, arg):
-        """All command to print all instances based on a class name or
+        """
+        All command to print all instances based on a class name or
         all classes if none specified
-
-        Usage:
-            $ all BaseModel
-            $ all
         """
         objs = storage.all()
         ins = []
@@ -101,18 +82,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_update(self, arg):
-        """Update command to update an instance based on the class name and id
-
-        Usage:
-            update <class name> <id> <attribute name> "<attribute value>"
-
-        Prints:
-            '** class name missing **' if no class name is given
-            '** class doesn't exist **' if class name doesn't exist
-            '** instance id missing **' if instance id missing
-            '** no instance found **' if instance of class does not exist
-            '** attribute name missing **' if attribute name is missing
-            '** value missing **' if value for attribute name is missing
+        """
+        Update command to update an instance based on the class name and id
         """
         obj = self.find_obj(arg)
         protected = ["id", "created_at", "updated_at"]
@@ -129,25 +100,34 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
 
     def do_quit(self, arg):
-        """Quit command to exit the program\n"""
+        """
+        Quit command to exit the program
+        """
         quit()
 
     def do_EOF(self, arg):
-        """EOF command to exit the program\n"""
+        """
+        EOF command to exit the program
+        """
         quit()
 
     def do_help(self, arg):
-        """Help command to get info on specified command
-        If no parameter given, list all commands
+        """
+        Help command to get info on specified command
+        If no parameter given list all commands
         """
         cmd.Cmd.do_help(self, arg)
 
     def emptyline(self):
-        """Empty line should do nothing"""
+        """
+        Empty line does nothing
+        """
         return
 
     def count(self, arg):
-        """Counts the number of instances of a class"""
+        """
+        Counts the number of instances of a class
+        """
         objs = storage.all()
         ins = []
         count = 0
@@ -160,9 +140,8 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def default(self, line):
-        """Defines action to happen if command prefix is not recognized.
-        Overridden to allow calls such as:
-            <class name>.add
+        """
+        Happens if command prefix is not recognized
         """
         command = line.split(".")
         if len(command) >= 2:
@@ -174,7 +153,9 @@ class HBNBCommand(cmd.Cmd):
             cmd.Cmd.default(self, line)
 
     def find_obj(self, arg):
-        """Finds specified object instance based on given arguments"""
+        """
+        Finds specified object instance based on given arguments
+        """
         if not arg:
             print('** class name missing **')
             return
