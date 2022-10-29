@@ -10,7 +10,8 @@ import models
 
 
 class BaseModel:
-    """Represent a BaseModel."""
+    """BaseModel class that defines common attrs/methods
+    for other class"""
 
     def __init__(self, *args, **kwargs):
         """Initialize a new BaseModel"""
