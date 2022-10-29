@@ -1,9 +1,10 @@
-# The Holberton AIRBnB CLONE                                                                                               
-![alt text](https://media.makeameme.org/created/gets-airbnb-says.jpg "fun AirB&B")             
+# AIRBnB CLONE                                                                                               
+<p align="center"><img src="bnb.png" alt="AirBnb  logo"></p>
+
 ## Description
 This is the first step towards building your first full web application: the AirBnB clone. This first step is very important because you will use what you build during this project with all other following projects: HTML/CSS templating, database storage, API, front-end integration…
 
-## the HBNB console                                                                                                   
+## The Console                                                                                                   
 ----
 Do you remember the Shell? It’s exactly the same but limited to a specific use-case. In our case, we want to be able to manage the objects of our project:
 
@@ -13,48 +14,48 @@ Do you remember the Shell? It’s exactly the same but limited to a specific use
    -Update attributes of an object  
    -Destroy an object  
    
-## Commands and how to use it                                                                                     
-the command interpreter allow us to handle our data requirements with the following commands
+## Commands and Functions
+The command interpreter allows us to handle our data requirements with the following commands:
                                                                                                                       
 | Command | Function |                                                                                                
 | ------- | ------------------------------------ |
-| create | create a new instace of a class |
+| create | create a new instance of a class |
 | show | show the info of an instance of a class |
-| destroy | destroy a instance of a class |
+| destroy | destroy an instance of a class |
 | update | update the info of the objects in an instance |
 | all | update the info of the objects in an instance |
 | quit | exit the console |
-| help | show the help of the commands |
+| help | show the help commands |
 
 ## Objects
-this is the objects that you can pass to the command console
+These are the objects that you can pass to the command console
 
 | Object | Function |                                                                                                
 | ------- | -------- |
-| city | city of the reservation |
-| state | country state of the reservation |
+| city | City of the reservation |
+| state | Country state of the reservation |
 | place | Name of the place of reservation |
-| user | Name of the user who reserves|
+| user | Name of the user who makes reservation |
 | amenity | Benefits of the place |
-| review | review of the room and the guest |
+| review | Reviews of the place |
 
-### Start using the console
+### Using the console
 start the console with
 ```./console```
 you will see:
 ```(hbnb)```
-and can start to use the hbnb console
+and start to use the hbnb console
 ## How to use the HBNB console
 ### Syntax:
 ``` <command> <classname> <id>```
-id don't apply to create command
+id does not apply to create command
 ### For help:
 ```help <command>```
 ### Examples:
 #### For Help:
 ```
 (hbnb)help create
-create a new instace of a class
+Create a new instace of a class
 (hbnb)
 ```
 #### For standard commands:
@@ -78,6 +79,3 @@ d711be23-73d9-4fbd-92f5-fe9ec7044d6d
 ['BaseModel', 'd711be23-73d9-4fbd-92f5-fe9ec7044d6d']
 (hbnb)
 ```
-## Authors
-[Geraldinne "market" Bohorquez] (https://github.com/geraldinnebohr)  
-[Hugo "Hache" Trujillo] (https://github.com/hacheG)
