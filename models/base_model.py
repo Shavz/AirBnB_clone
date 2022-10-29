@@ -5,11 +5,14 @@ import models
 
 
 class BaseModel:
-    """BaseModel class that defines common attrs/methods
-    for other class"""
+    """
+    BaseModel class that defines common attrs/methods
+    for other class
+    """
 
     def __init__(self, *args, **kwargs):
-        """Args:
+        """
+        Args:
                 id: id of instance
                 created_at: time of creation
                 updated_at: time of creation or modification
@@ -27,23 +30,31 @@ class BaseModel:
                     setattr(self, attr_name, attr)
 
     def __str__(self):
-        """returns str representation"""
+        """
+        returns str representation
+        """
         return "[{}] ({}) {}".format(str(type(self).__name__), self.id,
                                      str(self.__dict__))
 
     def __repr__(self):
-        """returns object representation"""
+        """
+        returns object representation
+        """
         return "[{}] ({}) {}".format(str(type(self).__name__), self.id,
                                      str(self.__dict__))
 
     def save(self):
-        """updates the updated_at attr w/ current datetime"""
+        """
+        updates the updated_at attr with current datetime
+        """
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """returns a dictionary representation of __dict__
-        w/ __class__ added"""
+        """
+        returns a dictionary representation of __dict__
+        with __class__ added
+        """
         d = dict(**self.__dict__)
         d['__class__'] = str(type(self).__name__)
         d['created_at'] = self.created_at.isoformat()
