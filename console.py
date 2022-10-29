@@ -5,7 +5,6 @@ Contains the entry point of the command interpreter
 """
 
 import cmd
-from shlex import split
 from datetime import datetime
 from models.base_model import BaseModel
 from models.user import User
