@@ -8,6 +8,6 @@ from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """Represent a State."""
+    """State class that inherits from BaseModel"""
 
     name = ""
