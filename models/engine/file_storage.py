@@ -22,19 +22,19 @@ class FileStorage:
 
     def all(self):
         """
-        methon all of file storage
+        method of file storage
         """
         return FileStorage.__objects
 
     def new(self, obj):
         """
-        method new of file storage
+        method for new file of file storage
         """
         FileStorage.__objects[obj.__class__.__name__ + "." + obj.id] = obj
 
     def save(self):
         """
-        method save of file storage
+        method to save files of file storage
         """
         first_dict = {}
         for key, val in FileStorage.__objects.items():
