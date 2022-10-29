@@ -79,3 +79,5 @@ d711be23-73d9-4fbd-92f5-fe9ec7044d6d
 ['BaseModel', 'd711be23-73d9-4fbd-92f5-fe9ec7044d6d']
 (hbnb)
 ```
+## Authors
+Shavin Lillkant <shavin.l@hotmail.com>
