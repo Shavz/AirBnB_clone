@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-fun console AirB&B proyect
+Console for AirBnB project
 """
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
@@ -22,7 +22,7 @@ class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb) "
 
     def emptyline(self):
-        """don't make nothing"""
+        """don't do anything"""
         pass
 
     def do_create(self, args):
@@ -37,7 +37,7 @@ class HBNBCommand(cmd.Cmd):
             newInstance.save()
             print(newInstance.id)
         except:
-            print("** class doesn't exist **")
+            print("** class does not exist **")
 
     def do_show(self, args):
         """Prints the string representation of an instance"""
@@ -52,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
         try:
             eval(token[0])
         except:
-            print("** class doesn't exist **")
+            print("** class does not exist **")
 
         objDict = storage.all()
         keyId = token[0] + "." + token[1]
@@ -76,7 +76,7 @@ class HBNBCommand(cmd.Cmd):
         try:
             eval(token[0])
         except:
-            print("** class doesn't exist **")
+            print("** class does not exist **")
         objDict = storage.all()
         keyId = token[0] + "." + token[1]
 
@@ -96,7 +96,7 @@ class HBNBCommand(cmd.Cmd):
         token = arg.split()
 
         if token[0] not in theClasses:
-            print("** class doesn't exist **")
+            print("** class does not exist **")
         else:
             all_objs = storage.all()
             newList = []
@@ -117,7 +117,7 @@ class HBNBCommand(cmd.Cmd):
         token = args.split()
 
         if token[0] not in theClasses:
-            print("** class doesn't exist **")
+            print("** class does not exist **")
         elif len(token) == 1:
             print("** instance id missing **")
         else:
@@ -141,7 +141,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def do_quit(self, args):
-        """Quit command to exit the program"""
+        """Command to exit the program"""
         return True
 
 if __name__ == "__main__":
