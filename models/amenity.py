@@ -8,6 +8,6 @@ from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """Represent a Amenity."""
+    """Amenity class that inherits from BaseModel"""
 
     name = ""
